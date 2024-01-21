@@ -42,6 +42,9 @@
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="Ingresar Datos"/>
@@ -52,29 +55,39 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblLibro" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCode" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblUsuario" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblFecha" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblTotal" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblCode" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblLibro" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblFecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="lblTotal" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="cmbxUsuario" min="-2" pref="157" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="txtCode" min="-2" pref="157" max="-2" attributes="0"/>
+                                  <Component id="cmbxLibro" min="-2" pref="157" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="txtFecha" alignment="0" min="-2" pref="157" max="-2" attributes="0"/>
+                              <Component id="txtTotal" min="-2" pref="157" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                          <Component id="btnPrestar" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="txtTotal" max="32767" attributes="0"/>
-                      <Component id="cmbxUsuario" pref="157" max="32767" attributes="0"/>
-                      <Component id="txtCode" alignment="0" max="32767" attributes="0"/>
-                      <Component id="cmbxLibro" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtFecha" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                  <Component id="btnPrestar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="185" max="32767" attributes="0"/>
+                  <EmptySpace pref="33" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -90,22 +103,22 @@
                       <Component id="lblLibro" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="cmbxLibro" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="lblUsuario" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="cmbxUsuario" min="-2" pref="31" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblUsuario" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="cmbxUsuario" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="lblFecha" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="txtFecha" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblFecha" min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="txtFecha" min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblTotal" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="txtTotal" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblTotal" alignment="0" min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="txtTotal" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                   <Component id="btnPrestar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
@@ -164,7 +177,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblFecha">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Fecha (yyyy-MM-dd HH:mm:ss)"/>
+            <Property name="text" type="java.lang.String" value="Fecha"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtFecha">

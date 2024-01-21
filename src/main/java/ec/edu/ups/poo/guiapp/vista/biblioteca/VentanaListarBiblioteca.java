@@ -78,6 +78,7 @@ public class VentanaListarBiblioteca extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Listar Datos"));
 
         btnListar.setText("Listar");
@@ -87,6 +88,7 @@ public class VentanaListarBiblioteca extends javax.swing.JInternalFrame {
             }
         });
 
+        tblDatos.setBackground(new java.awt.Color(255, 204, 255));
         tblDatos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

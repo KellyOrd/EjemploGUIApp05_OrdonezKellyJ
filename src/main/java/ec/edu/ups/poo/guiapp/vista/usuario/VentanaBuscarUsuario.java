@@ -59,11 +59,13 @@ public class VentanaBuscarUsuario extends javax.swing.JInternalFrame {
         txtNombre = new javax.swing.JTextField();
         txtCorreo = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(0, 0, 0));
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar Datos"));
 
         txtId.addActionListener(new java.awt.event.ActionListener() {

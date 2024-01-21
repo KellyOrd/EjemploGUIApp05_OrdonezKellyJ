@@ -65,6 +65,7 @@ public class VentanaCrearUsuario extends javax.swing.JInternalFrame {
         setResizable(true);
         setTitle("Crear Nuevo Usuario");
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Ingresar Datos"));
 
         txtNombre.addActionListener(new java.awt.event.ActionListener() {

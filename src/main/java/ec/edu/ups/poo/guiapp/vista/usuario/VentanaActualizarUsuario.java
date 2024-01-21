@@ -70,6 +70,7 @@ public class VentanaActualizarUsuario extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Actualizar Datos"));
 
         txtId.addActionListener(new java.awt.event.ActionListener() {

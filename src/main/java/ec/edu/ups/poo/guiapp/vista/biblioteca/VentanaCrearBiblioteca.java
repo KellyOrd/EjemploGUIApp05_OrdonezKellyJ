@@ -65,6 +65,7 @@ public class VentanaCrearBiblioteca extends javax.swing.JInternalFrame {
         setResizable(true);
         setTitle("Crear Nueva Biblioteca");
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Ingresar Datos"));
 
         txtCode.addActionListener(new java.awt.event.ActionListener() {
@@ -93,13 +94,13 @@ public class VentanaCrearBiblioteca extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblCode, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblNombre, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblDireccion, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblTelef, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(12, 12, 12)
+                    .addComponent(lblCode)
+                    .addComponent(lblNombre)
+                    .addComponent(lblDireccion)
+                    .addComponent(lblTelef))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtCode)
                     .addComponent(txtNombre)
@@ -107,9 +108,9 @@ public class VentanaCrearBiblioteca extends javax.swing.JInternalFrame {
                     .addComponent(txtTelef, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(104, 104, 104)
+                .addGap(73, 73, 73)
                 .addComponent(btnGuardar)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
