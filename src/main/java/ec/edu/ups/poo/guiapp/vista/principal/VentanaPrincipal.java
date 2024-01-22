@@ -34,12 +34,13 @@ import ec.edu.ups.poo.guiapp.vista.usuario.VentanaEliminarUsuario;
 import ec.edu.ups.poo.guiapp.vista.usuario.VentanaListarUsuario;
 import ec.edu.ups.poo.guiapp.modelo.Libro;
 import ec.edu.ups.poo.guiapp.modelo.Usuario;
+import java.awt.Image;
+import java.awt.Graphics;
+import javax.swing.ImageIcon;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
 
 /**
  *
@@ -79,6 +80,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private List<Libro> listaLibros = new ArrayList<>();
     private List<Usuario> listaUsuarios = new ArrayList<>();
     
+    
     /**
      * Creates new form VentanaPrincipal
      */
@@ -94,19 +96,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         prestamoControlador = new PrestamoControlador(prestamoDAO, libroDAO, usuarioDAO);
         locale = new Locale("es", "EC");
         
-        String rutaImagen = "/imagenes/imagenJava2.png";
         
-        // Crea un ImageIcon con la imagen
-        ImageIcon icono = new ImageIcon(getClass().getResource(rutaImagen));
-        
-        // Crea un JLabel y asigna el ImageIcon
-        JLabel labelImagen = new JLabel(icono);
-        
-        // Establece el tamaño y la posición del JLabel
-        labelImagen.setBounds(10, 10, icono.getIconWidth(), icono.getIconHeight());
-        
-        // Agrega el JLabel al JInternalFrame
-        getContentPane().add(labelImagen);
     }
 
     /**
@@ -118,7 +108,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        desktopPane = new javax.swing.JDesktopPane();
+        ImageIcon icon=new ImageIcon(getClass().getResource("/imagenes/logobibliotecavirtual.png"));
+        Image image=icon.getImage();
+        desktopPane = new javax.swing.JDesktopPane(){
+            public void paintComponent (Graphics g){
+                g.drawImage(image,0,0, getWidth(), getHeight(),this);
+            }
+        };
         menuBar = new javax.swing.JMenuBar();
         biblioMenu = new javax.swing.JMenu();
         crearBiblioItem = new javax.swing.JMenuItem();
@@ -150,6 +146,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuItemIdiomaEspanol = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        desktopPane.setBackground(new java.awt.Color(255, 204, 204));
 
         biblioMenu.setMnemonic('f');
         biblioMenu.setText("Biblioteca");
@@ -393,11 +391,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
         );
 
         pack();
@@ -676,6 +674,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
        if(ventanaCrearBiblioteca!= null){
            ventanaCrearBiblioteca.cambiarIdioma(locale);
        }
+       if(ventanaListarBiblioteca!= null){
+           ventanaListarBiblioteca.cambiarIdioma(locale);
+       }
        if(ventanaActualizarBiblioteca!= null){
            ventanaActualizarBiblioteca.cambiarIdioma(locale);
        }
@@ -685,6 +686,52 @@ public class VentanaPrincipal extends javax.swing.JFrame {
        if(ventanaEliminarBiblioteca!= null){
            ventanaEliminarBiblioteca.cambiarIdioma(locale);
        }
+       if(ventanaActualizarLibro!= null){
+           ventanaActualizarLibro.cambiarIdioma(locale);
+       }
+       if(ventanaBuscarLibro!= null){
+           ventanaBuscarLibro.cambiarIdioma(locale);
+       }
+       if(ventanaCrearLibro!= null){
+           ventanaCrearLibro.cambiarIdioma(locale);
+       }
+       if(ventanaEliminarLibro!= null){
+           ventanaEliminarLibro.cambiarIdioma(locale);
+       }
+       if(ventanaListarLibro!= null){
+           ventanaListarLibro.cambiarIdioma(locale);
+       }
+       if(ventanaActualizarPrestamo!= null){
+           ventanaActualizarPrestamo.cambiarIdioma(locale);
+       }
+       if(ventanaBuscarPrestamo!= null){
+           ventanaBuscarPrestamo.cambiarIdioma(locale);
+       }
+       if(ventanaCrearPrestamo!= null){
+           ventanaCrearPrestamo.cambiarIdioma(locale);
+       }
+       if(ventanaEliminarPrestamo!= null){
+           ventanaEliminarPrestamo.cambiarIdioma(locale);
+       }
+       if(ventanaListarPrestamo!= null){
+           ventanaListarPrestamo.cambiarIdioma(locale);
+       }
+       if(ventanaActualizarUsuario!= null){
+           ventanaActualizarUsuario.cambiarIdioma(locale);
+       }
+       if(ventanaBuscarUsuario!= null){
+           ventanaBuscarUsuario.cambiarIdioma(locale);
+       }
+       if(ventanaCrearUsuario!= null){
+           ventanaCrearUsuario.cambiarIdioma(locale);
+       }
+       if(ventanaEliminarUsuario!= null){
+           ventanaEliminarUsuario.cambiarIdioma(locale);
+       }
+       if(ventanaListarUsuario!= null){
+           ventanaListarUsuario.cambiarIdioma(locale);
+       }
+       
     }
     /**
      * @param args the command line arguments
@@ -753,5 +800,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuItemIdiomaIngles;
     private javax.swing.JMenu prestamoMenu;
     // End of variables declaration//GEN-END:variables
-
+    
+    
+    
 }
